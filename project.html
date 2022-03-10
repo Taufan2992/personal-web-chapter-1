@@ -1,0 +1,134 @@
+
+<html>
+    <head>
+      <title>Creating Project Page</title>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+      <!-- NavBar -->
+      <nav>
+
+        <div class="left-side">
+            <img src="assets/logo.png">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">My Project</a></li>
+            </ul>
+        </div>
+
+        <div class="right-side">
+            <a href="contact.html">Contact Me</a>
+        </div>
+
+    </nav>
+  
+      <!-- Project -->
+      <!-- Form -->
+      <div class="project">
+        <div class="project-form">
+          <div class="form-container">
+
+            <form onsubmit="addProject(event)">
+              <h1>ADD MY PROJECT</h1>
+              <div>
+                <label for="input-project-title">Project Name</label>
+                <input class="project-name" id="input-project-title" />
+              </div>
+              <div class="input-date" style="display: flex;">
+                <div class="input-date-left" style="flex: 1; margin-right: 10px;">
+                    <label for="input-project-startdate">Start Date</label>
+                    <input class="date" id="input-project-startdate" type="date" />
+                </div>
+                <div class="input-date-right" style="flex: 1; margin-left: 10px;">
+                    <label for="input-project-enddate">End Date</label>
+                    <input class="date" id="input-project-enddate" type="date" />
+                </div>
+              </div>
+              <div>
+                <label for="input-project-content">Description</label>
+                <textarea id="input-project-content"></textarea>
+              </div>
+              <div class="checkbox" style="display: inline-block;" >
+                <h3>Tecnologies</h3>
+                <div class="checkbox-list">
+                    <div class="checkbox-list-item"><input class="checkbox" type="checkbox" id="node-js" value="NodeJs"> Node Js</div>
+                    <div class="checkbox-list-item"><input class="checkbox" type="checkbox" id="next-js" value="NextJs"> Next Js</div>
+                    <div class="checkbox-list-item"><input class="checkbox" type="checkbox" id="react-js" value="ReactJs"> React Js</div>
+                    <div class="checkbox-list-item"><input class="checkbox" type="checkbox" id="typescript" value="TypeScript"> Typescript</div>
+                </div>
+                
+            </div>
+              <div>
+                    <label>Upload Image</label>
+                    <div class="input-project-image-group">
+                        <label for="input-project-image">
+                            <p>Choose</p>
+                            <i class="fa-solid fa-paperclip"></i>
+                        </label>
+                        <input type="file" id="input-project-image" hidden />
+                    </div>
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="addProject()">Submit</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+        
+        <hr class="line" />
+        
+        <div class="project-list">
+          <!-- dynamic content would be here -->
+          <div class="myproject">
+            <h1>My Project</h1>
+            <div id="contents" class="myproject-content">
+    
+                <div class="myproject-content-item">
+                    <div class="myproject-item-image">
+                        <img src="assets/image2.jpg" alt="">
+                    </div>
+                    <div class="myproject-item-title">
+                        <h3>Pasar Coding di Indonesia Dinilai Masih Menjanjikan</h3>
+                        <p>durasi</p>
+                    </div>
+                    <div class="myproject-item-text">
+                        <p>Ketimpangan sumber daya manusia (SDM) di sektor digital masih
+                            menjadi isu yang belum terpecahkan. Berdasarkan penelitian
+                            ManpowerGroup, ketimpangan SDM global, termasuk Indonesia,
+                            meningkat dua kali lipat dalam satu dekade terakhir. Lorem ipsum,
+                            dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="myproject-item-icon">
+                        <img id="node-js" src="assets/nodejs.png" alt="">
+                        <img id="next-js" src="assets/nextjs.png" alt="">
+                        <img id="react-js" src="assets/react.png" alt="">
+                        <img id="typescript" src="assets/typescript.png" alt="">
+                    </div>
+                    <div class="myproject-item-button">
+                        <div class="button-left">
+                            <button>edit</button>
+                        </div>
+                        <div class="button-right">
+                            <button>delete</button>
+                        </div>
+                    </div>
+        
+                </div>
+
+
+            </div>
+
+            
+        </div>
+
+
+          <!-- End dynamic content would be here -->
+        </div>
+      </div>
+      <script src="project.js"></script>
+    </body>
+  </html>
+  
